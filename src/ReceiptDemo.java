@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class ReceiptDemo {
 
     public static void main(String[] args) {
@@ -7,9 +9,9 @@ public class ReceiptDemo {
     private void run() {
         Receipt r = new Receipt(new Printer());
 
-        r.add("Brie", new Money("1.95", "SGD"));
-        r.add("Bread", new Money("0.95", "SGD"));
-        r.add("Merlot", new Money("12.95", "SGD"));
+        r.add("Brie", new Money(new BigDecimal("1.95"), "SGD"));
+        r.add("Bread", new Money(new BigDecimal("0.95"), "SGD"));
+        r.add("Merlot", new Money(new BigDecimal("12.95"), "SGD"));
 
         r.print();
     }
